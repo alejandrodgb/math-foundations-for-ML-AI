@@ -1,21 +1,103 @@
 # Mathematical Foundations for ML and AI
 
-## Vector and Matrix Norms
-### Norms
+## Linear Algebra
+### Vector and Matrix Norms
 **Norm**: function used to measure the magnitude of a 
 - Norms map vectors to non-negative values
 - The norm vector **x** measures the distance from the origin to the point **x**
 
 **Norm Types**
 - L<sub>p</sub><br>
-<img src="https://latex.codecogs.com/gif.latex?\left&space;\|&space;x&space;\right&space;\|_{p}&space;=&space;\left&space;(&space;\sum_{i}&space;\left&space;|&space;x_{i}&space;\right&space;|^{p}\right&space;)^{\frac{1}{p}}" title="Lp Norm" /></a>
+<img src="https://latex.codecogs.com/gif.latex?\left&space;\|&space;x&space;\right&space;\|_{p}&space;=&space;\left&space;(&space;\sum_{i}&space;\left&space;|&space;x_{i}&space;\right&space;|^{p}\right&space;)^{\frac{1}{p}}" title="Lp Norm" />
 - Eucledean Norm (L<sup>2</sup> norm or ||**x**||): most commonly used norm function.<br>
-<img src="https://latex.codecogs.com/gif.latex?\left&space;\|&space;x&space;\right&space;\|_{2}&space;=&space;\left&space;(&space;\sum_{i}&space;\left&space;|&space;x_{i}&space;\right&space;|^{2}\right&space;)^{\frac{1}{2}}" title="Eucledean Norm" /></a>
+<img src="https://latex.codecogs.com/gif.latex?\left&space;\|&space;x&space;\right&space;\|_{2}&space;=&space;\left&space;(&space;\sum_{i}&space;\left&space;|&space;x_{i}&space;\right&space;|^{2}\right&space;)^{\frac{1}{2}}" title="Eucledean Norm" />
 - L<sup>1</sup>: used in cases where discriminating between small, nonzero values and zero is important. Increases linearly as elements of **x** increase.<br>
-<img src="https://latex.codecogs.com/gif.latex?\left&space;\|&space;x&space;\right&space;\|_{1}&space;=&space;\sum_{i}&space;\left&space;|&space;x_{i}&space;\right&space;|" title="L1 Norm" /></a>
+<img src="https://latex.codecogs.com/gif.latex?\left&space;\|&space;x&space;\right&space;\|_{1}&space;=&space;\sum_{i}&space;\left&space;|&space;x_{i}&space;\right&space;|" title="L1 Norm" />
 - Max Norm (L<sup>inf</sup>): simplifies to the absolute value of the largest element in the vector. <br>
-<img src="https://latex.codecogs.com/gif.latex?\left&space;\|&space;x&space;\right&space;\|_\infty&space;=&space;max_{i}&space;\left&space;|&space;x_{i}&space;\right&space;|" title="Max Norm" /></a>
+<img src="https://latex.codecogs.com/gif.latex?\left&space;\|&space;x&space;\right&space;\|_\infty&space;=&space;max_{i}&space;\left&space;|&space;x_{i}&space;\right&space;|" title="Max Norm" />
 - Frobenius Norm: Analogous to L<sup>2</sup> norm for a vector used in matrices.<br>
-<img src="https://latex.codecogs.com/gif.latex?\left&space;\|&space;A&space;\right&space;\|_F&space;=&space;\sqrt{&space;\sum_{i,j}&space;A_{i,j}^2&space;}" title="Frobenius Norm" /></a>
+<img src="https://latex.codecogs.com/gif.latex?\left&space;\|&space;A&space;\right&space;\|_F&space;=&space;\sqrt{&space;\sum_{i,j}&space;A_{i,j}^2&space;}" title="Frobenius Norm" />
 
 ### Vectors, Matrices, and Tensors in Python
+See vector_matrices_tensors_in_python.ipynb file
+
+### Special Matrices and Vectors
+#### Diagonal Matrices
+A matrix is diagonal if the following condition is met:<br>
+<img src="https://latex.codecogs.com/gif.latex?D_{i,j}&space;=&space;0&space;for&space;all&space;i&space;\neq&space;j" title="Diagonal Matrices" /></a>
+
+Example of a diagonal matrix: <br>
+<img src="https://latex.codecogs.com/gif.latex?\begin{bmatrix}&space;1&space;&&space;0&space;&&space;0\\&space;0&space;&&space;2&space;&&space;0\\&space;0&space;&&space;0&space;&&space;3&space;\end{bmatrix}" title="Diagonal Matrix" />
+
+- Multiplying by a diagonal matrix is computational efficient. For *diag(**v**)**x***, we only need to scale each element *x<sub>i</sub>* by *v<sub>i</sub>*<br><img src="https://latex.codecogs.com/gif.latex?\begin{bmatrix}&space;1&space;&&space;0&space;&&space;0\\&space;0&space;&&space;2&space;&&space;0\\&space;0&space;&&space;0&space;&&space;3&space;\end{bmatrix}&space;*&space;\begin{bmatrix}&space;1&space;&&space;1&space;&&space;1\\&space;1&space;&&space;1&space;&&space;1\\&space;1&space;&&space;1&space;&&space;1&space;\end{bmatrix}&space;=&space;\begin{bmatrix}&space;1(1)&space;&&space;1(1)&space;&&space;1(1)\\&space;2(1)&space;&&space;2(1)&space;&&space;2(1)\\&space;3(1)&space;&&space;3(1)&space;&&space;3(1)&space;\end{bmatrix}" title="Diagonal Matrix Multiplication" />
+- In some cases, computationally efficient algorithms are designed by restricting some matrices to be diagonal
+- Diagonal matrices need not be square
+
+#### Symmetric Matrices
+Symmetric matrices are matrices equal to their transpose<br>
+**A** = **A**<sup>T</sup>
+
+For example:<br>
+<img src="https://latex.codecogs.com/gif.latex?\begin{bmatrix}&space;1&space;&&space;2&space;&&space;3\\&space;2&space;&&space;3&space;&&space;4\\&space;3&space;&&space;4&space;&&space;5&space;\end{bmatrix}" title="Symmetric Matrix" />
+
+- Symmetric matrices often arise when the entries are generated by some function of two arguments that does not depend on the order of arguments. Eucledian distance is symmetric, so distance matrices will often be symmetric matrices.
+
+#### Unit Vector
+A unit vector is a vector with unit norm: <br>
+<img src="https://latex.codecogs.com/gif.latex?\left&space;\|&space;x&space;\right&space;\|_{2}&space;=&space;1" title="Unit Vector" />
+
+A unit vector can be obtained by normalizing any vector.
+
+##### Vector Normalization
+Normalization is the process of diving a vector by its magnitude, which produces a unit vector.<br>
+<img src="https://latex.codecogs.com/gif.latex?\frac{x}{\left&space;\|&space;x&space;\right&space;\|_{2}}&space;=&space;unit\_vector" title="Vector Normalization" />
+
+#### Orthogonality
+A vector **x** and a vector **y** are **orthogonal** to each other if **x** \* **y** = 0
+
+If two vectors are orthogonal and have a nonzero magnitude in a 2D space, they will be at a 90 degree angle to each other.
+
+If two vector are orthogonal and unit vectors, they are **orthonormal**.
+
+Orthogonal matrices are matrices whose rows and columns are mutually orthonormal. This is not commonly used in artificial intelligence.
+
+### Eigenvalues and Eigenvectors
+#### Eigendecomposition
+Eigendecomposition is breaking mathematical objects into their constituent parts. For example: breaking up integer 10 into its prime factors: 2 and 5. We can conclude that 10 is not divisible by 3 and any product of 10 will also be divisible by 5 and 2.
+
+We can also apply this to matrices to reveal functional properties that are not obvious from the representation of the matrix as an array of elements.
+
+#### Eigenvectors and Eigenvalues
+An eigenvector of a square matrix **A** is a nonzero vector **v** such that multiplication by **A** alters only the scale of **v**.<br>
+<img src="https://latex.codecogs.com/gif.latex?Av&space;=&space;\lambda&space;v" title="Av = \lambda v" /><br>
+where:
+- **v** = eigenvector
+- <img src="https://latex.codecogs.com/gif.latex?\lambda" title="\lambda" /> = a scalar, the eigenvalue corresponding to **v**
+
+#### Eigendecomposition
+If a matrix **A** has *n* linearly independent eigenvectors we ca nform a matrix **V** with one eigenvector per columns, and a vector <img src="https://latex.codecogs.com/gif.latex?\lambda" title="\lambda" /> of all the eigenvalues.
+
+The eigendecomposition of **A** is given by:<br>
+<img src="https://latex.codecogs.com/gif.latex?A&space;=&space;V&space;diag(\lambda)V^{-1}" title="Eigendecomposition" />
+
+#### Inverse Matrix
+<img src="https://latex.codecogs.com/gif.latex?AA^{-1}=A^{-1}A=I" title="Inverse Matrix" /><br>
+where **I** is the identity matrix.
+
+The identity matrix is a square matrix with 1 on the diagonal and 0 elsewhere.<br>
+<img src="https://latex.codecogs.com/gif.latex?I&space;=&space;\begin{bmatrix}&space;1&space;&&space;0&space;&&space;0\\&space;0&space;&&space;1&space;&&space;0\\&space;0&space;&&space;0&space;&&space;1&space;\end{bmatrix}" title="Identity Matrix" />
+
+#### Eigendecomposition Properties
+- Not every matrix can be decomposed into eigenvalues and eigenvectors.
+- A matrix is singular (the inverse does not exist) if any of the eigenvalues are zero.
+- A matrix with all positive eigenvalues is called a positive definite.
+- A matrix with all positive or zero eigenvalues is positive semidefinite.
+- A matrix with all negative eigenvalues is negative definite.
+- A matrix with all negative or zero eigenvalues is negative semidefinite.
+
+#### Application of Eigendecomposition
+Eigenvalue decomposition is mainly used in principal component analysis (PCA).
+
+PCA is a statistical procedured used to convert a set of observations of possibly correlated variables into a set of values of lineraly uncorrelated variables called principal components.
+
+PCA is used for summarizing or compressing the data.
