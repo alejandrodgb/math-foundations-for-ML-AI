@@ -165,3 +165,51 @@ Example:
 </table>
 
 These are the partial derivatives with respect to other variable.
+
+### Introduction to Integration
+Integration is used to find the area under the curve. It is the reverse process of differentiation.
+
+<img src="https://latex.codecogs.com/gif.latex?\int&space;f'(x)dx=f(x)+C" />
+
+Where *C* is the constant of integration.
+
+<table>
+<caption>Types of Derivatives</caption>
+    <tr>
+        <th>Indefinite</th>
+        <th>Definite</th>
+    </tr>
+    <tr>
+        <td>
+            Integrals with no limits<br>
+            <img src="https://latex.codecogs.com/gif.latex?\int&space;f(x)dx" />
+        </td>
+        <td>
+            Integrals with limits<br>
+            <img src="https://latex.codecogs.com/gif.latex?\int^{a}_{b}&space;f(x)dx" />
+        </td>
+    </tr>
+</table>
+
+#### Integration Rules
+- Power Rule<br>
+<img src="https://latex.codecogs.com/gif.latex?\int&space;x^{n}dx=\frac{x^{n+1}}{n+1}+C" />; for example
+<img src="https://latex.codecogs.com/gif.latex?\int&space;x^{2}dx=\frac{x^{3}}{3}+C" />
+- Constants<br>
+<img src="https://latex.codecogs.com/gif.latex?\int&space;kdx=kx+C" />; for example
+<img src="https://latex.codecogs.com/gif.latex?\int&space;4dx=4x+C" />
+
+#### Evaluating Definite Integrals
+<img src="https://latex.codecogs.com/gif.latex?\int^{a}_{b}&space;f(x)dx=f(x)+C" /><br>
+(value of <img src="https://latex.codecogs.com/gif.latex?f(x)+C" /> at *x* = *b*)-(value of <img src="https://latex.codecogs.com/gif.latex?f(x)+C" /> at *x*=*a*)<br>
+<img src="https://latex.codecogs.com/gif.latex?\int^{a}_{b}&space;f'(x)dx=f(b)-f(a)" /><br>
+<img src="https://latex.codecogs.com/gif.latex?\int^{a}_{b}&space;f'(x)dx=f(x)|^{a}_{b}=f(b)-f(a)" />
+
+For example:
+
+<img src="https://latex.codecogs.com/gif.latex?\int^{2}_{0}&space;3x^{2}dx" /><br>
+<img src="https://latex.codecogs.com/gif.latex?=3\int^{2}_{0}&space;x^{2}dx" /><br>
+<img src="https://latex.codecogs.com/gif.latex?=3\frac{x^{3}}{3}|^{2}_{0}" /><br>
+<img src="https://latex.codecogs.com/gif.latex?=x^{3}|^{2}_{0}" /><br>
+<img src="https://latex.codecogs.com/gif.latex?=2^{3}-0^{3}" /><br>
+So the area under the curve between *x*=0 and *x*=2 is 8.
