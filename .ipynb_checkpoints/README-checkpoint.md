@@ -123,18 +123,23 @@ If <img src="https://latex.codecogs.com/gif.latex?y=f(x)" title="Different notat
 - Constant <br>
 <img src="https://latex.codecogs.com/gif.latex?\frac{d}{dx}c=0" title="Derivative Rules" />; for example
 <img src="https://latex.codecogs.com/gif.latex?\frac{d}{dx}62=0" title="Derivative Rules Example" />
+
 - Power rule<br>
 <img src="https://latex.codecogs.com/gif.latex?\frac{d}{dx}x^{n}=nx^{n-1}" title="Derivative Rules" />; for example
 <img src="https://latex.codecogs.com/gif.latex?\frac{d}{dx}x^{3}=3x^{2}" title="Derivative Rules Example" />
+
 - Multiplication<br>
 <img src="https://latex.codecogs.com/gif.latex?\frac{d}{dx}cx^{n}=ncx^{n-1}" title="Derivative Rules" />; for example
 <img src="https://latex.codecogs.com/gif.latex?\frac{d}{dx}4x^{3}=4(3)x^{3-1}=12x^2" title="Derivative Rules Example" />
+
 - Sum rule<br>
 <img src="https://latex.codecogs.com/gif.latex?\frac{d}{dx}(f(x)+g(x))=\frac{d}{dx}f(x)+\frac{d}{dx}g(x)" title="Derivative Rules" />; for example
 <img src="https://latex.codecogs.com/gif.latex?\frac{d}{dx}(4x+2x^{2})=4\frac{d}{dx}x+2\frac{d}{dx}x^{2}=4+4x" title="Derivative Rules Example" />
+
 - Product rule <br>
 <img src="https://latex.codecogs.com/gif.latex?\frac{d}{dx}(f(x)g(x))=g(x)\frac{d}{dx}f(x)+f(x)\frac{d}{dx}g(x)" title="Derivative Rules"/>; for example
 <img src="https://latex.codecogs.com/gif.latex?\frac{d}{dx}(x^{2}x)=x\frac{d}{dx}x^{2}+x^{2}\frac{d}{dx}x=x(2x)+x^{2}(1)=2x^{2}+x^{2}=3x^2" title="Derivative Rules Example" />
+
 - Chain rule <br>
 <img src="https://latex.codecogs.com/gif.latex?\frac{d}{dx}(f(g(x)))=f'(g(x))g'(x)" title="Derivative Rules"/>; for example
 <img src="https://latex.codecogs.com/gif.latex?\frac{d}{dx}sin(x^{2})=\frac{d}{dx}sin(x^{2})\frac{d}{dx}x^{2}=cos(x^{2})(2x)=2xcos(x^{2})">
@@ -199,6 +204,7 @@ Where *C* is the constant of integration.
 - Power Rule<br>
 <img src="https://latex.codecogs.com/gif.latex?\int&space;x^{n}dx=\frac{x^{n+1}}{n+1}+C" />; for example
 <img src="https://latex.codecogs.com/gif.latex?\int&space;x^{2}dx=\frac{x^{3}}{3}+C" />
+
 - Constants<br>
 <img src="https://latex.codecogs.com/gif.latex?\int&space;kdx=kx+C" />; for example
 <img src="https://latex.codecogs.com/gif.latex?\int&space;4dx=4x+C" />
