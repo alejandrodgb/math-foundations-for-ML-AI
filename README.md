@@ -145,7 +145,7 @@ Example:
 <table>
     <tr>
         <td>1. <img src="https://latex.codecogs.com/gif.latex?\frac{d}{dx}" /> and treat *y* as a constant</td>
-        <td>2. <img src="https://latex.codecogs.com/gif.latex?\frac{d}{dy}" /> and treat the result of <img src="https://latex.codecogs.com/gif.latex?\frac{d}{dx}" /> as a constant</td>
+        <td>2. <img src="https://latex.codecogs.com/gif.latex?\frac{d}{dy}" /> and treat *x* as a constant</td>
     </tr>
     <tr>
         <td>
