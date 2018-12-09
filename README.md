@@ -144,8 +144,8 @@ Example:
 
 <table>
     <tr>
-        <td>1. <img src="https://latex.codecogs.com/gif.latex?\frac{d}{dx}" /> and treat _y_ as a constant</td>
-        <td>2. <img src="https://latex.codecogs.com/gif.latex?\frac{d}{dy}" /> and treat _x_ as a constant</td>
+        <td>1. <img src="https://latex.codecogs.com/gif.latex?\frac{d}{dx}" /> and treat <i>y</i> as a constant</td>
+        <td>2. <img src="https://latex.codecogs.com/gif.latex?\frac{d}{dy}" /> and treat <i>x</i> as a constant</td>
     </tr>
     <tr>
         <td>
