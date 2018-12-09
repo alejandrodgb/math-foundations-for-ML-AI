@@ -119,7 +119,7 @@ If <img src="https://latex.codecogs.com/gif.latex?y=f(x)" title="Different notat
 - Constant <br>
 <img src="https://latex.codecogs.com/gif.latex?\frac{d}{dx}c=0" title="Derivative Rules" />; for example
 <img src="https://latex.codecogs.com/gif.latex?\frac{d}{dx}62=0" title="Derivative Rules Example" />
-- Power rule<br
+- Power rule<br>
 <img src="https://latex.codecogs.com/gif.latex?\frac{d}{dx}x^{n}=nx^{n-1}" title="Derivative Rules" />; for example
 <img src="https://latex.codecogs.com/gif.latex?\frac{d}{dx}x^{3}=3x^{2}" title="Derivative Rules Example" />
 - Multiplication<br>
@@ -213,3 +213,31 @@ For example:
 <img src="https://latex.codecogs.com/gif.latex?=x^{3}|^{2}_{0}" /><br>
 <img src="https://latex.codecogs.com/gif.latex?=2^{3}-0^{3}" /><br>
 So the area under the curve between *x*=0 and *x*=2 is 8.
+
+### Vector Calculus: Gradients
+Partial derivatives can be organised as vectors.
+
+<img src="https://latex.codecogs.com/gif.latex?\Delta&space;=&space;\begin{bmatrix}&space;\frac{d}{dx}&space;&&space;\frac{d}{dy}&space;\end{bmatrix}" />
+
+<img src="https://latex.codecogs.com/gif.latex?\Delta&space;f(x,y)&space;=&space;\begin{bmatrix}&space;\frac{df(x,y)}{dx}&space;&&space;\frac{df(x,y)}{dy}&space;\end{bmatrix}" />
+
+For example:
+
+<img src="https://latex.codecogs.com/gif.latex?f(x,y)=3x^{2}y" /><br>
+<img src="https://latex.codecogs.com/gif.latex?\Delta&space;3x^{2}y&space;=&space;\begin{bmatrix}&space;\frac{d}{dx}3x^{2}y&space;&&space;\frac{d}{dy}3x^{2}y&space;\end{bmatrix}=\begin{bmatrix}&space;6xy&space;&&space;3x^{2}&space;\end{bmatrix}" />
+
+The gradient represents the rate of change. It points in the direction of the greates rate of increase of the function, and its magnitude is the slope in that direction.
+
+Gradient vectors can be in *n* dimensions.
+
+#### Jacobian Matrix
+Matrix to organise multiple functions of partial derivatives
+
+<img src="https://latex.codecogs.com/gif.latex?J=\begin{bmatrix}&space;\Delta&space;f(x,y)\\&space;\Delta&space;g(x,y)&space;\end{bmatrix}&space;=&space;\begin{bmatrix}&space;\frac{df(x,y)}{dx}&space;&&space;\frac{df(x,y)}{dy}\\&space;\frac{dg(x,y)}{dx}&space;&&space;\frac{dg(x,y)}{dy}&space;\end{bmatrix}" />
+
+**The general case**
+
+<img src="https://latex.codecogs.com/gif.latex?f(x,y,z)\rightarrow&space;f(x)" /> where 
+<img src="https://latex.codecogs.com/gif.latex?x=\begin{bmatrix}&space;x_1\\&space;x_2\\&space;...\\&space;x_n&space;\end{bmatrix}" />
+
+<img src="https://latex.codecogs.com/gif.latex?J=\begin{bmatrix}&space;\Delta&space;f_1(x)\\&space;\Delta&space;f_2(x)\\&space;...\\&space;\Delta&space;f_m(x)\\&space;\end{bmatrix}&space;=&space;\begin{bmatrix}&space;\frac{d}{dx_1}f_1(x)&space;&&space;\frac{d}{dx_2}f_1(x)&space;&&space;...&space;&&space;\frac{d}{dx_n}f_1(x)\\&space;\frac{d}{dx_1}f_2(x)&space;&&space;\frac{d}{dx_2}f_2(x)&space;&&space;...&space;&&space;\frac{d}{dx_n}f_2(x)\\&space;...&space;&&space;...&space;&&space;...&space;&&space;...&space;\\&space;\frac{d}{dx_1}f_m(x)&space;&&space;\frac{d}{dx_2}f_m(x)&space;&&space;...&space;&&space;\frac{d}{dx_n}f_m(x)\\&space;\end{bmatrix}" />
