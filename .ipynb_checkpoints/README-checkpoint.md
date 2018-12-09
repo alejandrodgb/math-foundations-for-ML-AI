@@ -101,3 +101,67 @@ Eigenvalue decomposition is mainly used in principal component analysis (PCA).
 PCA is a statistical procedured used to convert a set of observations of possibly correlated variables into a set of values of lineraly uncorrelated variables called principal components.
 
 PCA is used for summarizing or compressing the data.
+
+## Multivariate Calculus
+### Introduction to Derivatives
+**Definition**<br>
+- From a geometric perspective it is the slope of a curve. How much does the line change at that point.
+- From a physical concept it is the rate of change
+
+#### Derivative basics
+The derivative operator:<img src="https://latex.codecogs.com/gif.latex?\frac{d}{dx}" title="\frac{d}{dx}" /><br>
+where *d* implies derivative and the *x* indicates which variable will the derivative be taken of.
+
+Different notations:<br>
+If <img src="https://latex.codecogs.com/gif.latex?y=f(x)" title="Different notations" /> then <img src="https://latex.codecogs.com/gif.latex?\frac{dy}{dx}&space;=&space;\frac{df(x)}{dx}&space;=&space;\frac{d}{dx}f(x)=f'(x)" title="Different notations" />
+
+#### Derivative Rules
+- Constant <br>
+<img src="https://latex.codecogs.com/gif.latex?\frac{d}{dx}c=0" title="Derivative Rules" />; for example
+<img src="https://latex.codecogs.com/gif.latex?\frac{d}{dx}62=0" title="Derivative Rules Example" />
+- Power rule<br
+<img src="https://latex.codecogs.com/gif.latex?\frac{d}{dx}x^{n}=nx^{n-1}" title="Derivative Rules" />; for example
+<img src="https://latex.codecogs.com/gif.latex?\frac{d}{dx}x^{3}=3x^{2}" title="Derivative Rules Example" />
+- Multiplication<br>
+<img src="https://latex.codecogs.com/gif.latex?\frac{d}{dx}cx^{n}=ncx^{n-1}" title="Derivative Rules" />; for example
+<img src="https://latex.codecogs.com/gif.latex?\frac{d}{dx}4x^{3}=4(3)x^{3-1}=12x^2" title="Derivative Rules Example" />
+- Sum rule<br>
+<img src="https://latex.codecogs.com/gif.latex?\frac{d}{dx}(f(x)+g(x))=\frac{d}{dx}f(x)+\frac{d}{dx}g(x)" title="Derivative Rules" />; for example
+<img src="https://latex.codecogs.com/gif.latex?\frac{d}{dx}(4x+2x^{2})=4\frac{d}{dx}x+2\frac{d}{dx}x^{2}=4+4x" title="Derivative Rules Example" />
+- Product rule <br>
+<img src="https://latex.codecogs.com/gif.latex?\frac{d}{dx}(f(x)g(x))=g(x)\frac{d}{dx}f(x)+f(x)\frac{d}{dx}g(x)" title="Derivative Rules"/>; for example
+<img src="https://latex.codecogs.com/gif.latex?\frac{d}{dx}(x^{2}x)=x\frac{d}{dx}x^{2}+x^{2}\frac{d}{dx}x=x(2x)+x^{2}(1)=2x^{2}+x^{2}=3x^2" title="Derivative Rules Example" />
+- Chain rule <br>
+<img src="https://latex.codecogs.com/gif.latex?\frac{d}{dx}(f(g(x)))=f'(g(x))g'(x)" title="Derivative Rules"/>; for example
+<img src="https://latex.codecogs.com/gif.latex?\frac{d}{dx}sin(x^{2})=\frac{d}{dx}sin(x^{2})\frac{d}{dx}x^{2}=cos(x^{2})(2x)=2xcos(x^{2})">
+
+#### Partial Derivatives
+Used for functions with more than one variable.
+
+Example:
+
+<img src="https://latex.codecogs.com/gif.latex?f(x,y)=3x^{2}y" />
+
+<table>
+    <tr>
+        <td>1. <img src="https://latex.codecogs.com/gif.latex?\frac{d}{dx}" /> and treat *y* as a constant</td>
+        <td>2. <img src="https://latex.codecogs.com/gif.latex?\frac{d}{dy}" /> and treat the result of <img src="https://latex.codecogs.com/gif.latex?\frac{d}{dx}" /> as a constant</td>
+    </tr>
+    <tr>
+        <td>
+            <img src="https://latex.codecogs.com/gif.latex?\frac{d}{dx}f(x,y)" /><br>
+            <img src="https://latex.codecogs.com/gif.latex?=\frac{d}{dx}3x^{2}y" /><br>
+            <img src="https://latex.codecogs.com/gif.latex?=3y\frac{d}{dx}x^{2}" /><br>
+            <img src="https://latex.codecogs.com/gif.latex?=3y(2x)" /><br>
+            <img src="https://latex.codecogs.com/gif.latex?=6xy" />
+        </td>
+        <td>
+            <img src="https://latex.codecogs.com/gif.latex?\frac{d}{dy}f(x,y)" /><br>
+            <img src="https://latex.codecogs.com/gif.latex?=\frac{d}{dy}3x^{2}y" /><br>
+            <img src="https://latex.codecogs.com/gif.latex?=3x^{2}\frac{d}{dx}y" /><br>
+            <img src="https://latex.codecogs.com/gif.latex?=3x^{2}" />
+        </td>
+    </tr>
+</table>
+
+These are the partial derivatives with respect to other variable.
