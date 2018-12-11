@@ -292,11 +292,12 @@ y'=2x
 x=0 --> this is a critical point
 
 3. Do the second derivative test
-y'=2x
+y'=2x<br>
 y''=2 --> if the second derivative is positive we have a minimum, if negative we have a maximum.
 
 If we can prove that the function is a convex function, there is no need to do the second derivative test as we would be guaranteed to be at the global critical point.
 
 In machine learning the optimisation process is iterative by starting with a guess and then iterating.
 
+## Probability Theory
 
