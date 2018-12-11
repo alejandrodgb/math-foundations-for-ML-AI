@@ -251,3 +251,52 @@ Matrix to organise multiple functions of partial derivatives
 <img src="https://latex.codecogs.com/gif.latex?x=\begin{bmatrix}&space;x_1\\&space;x_2\\&space;...\\&space;x_n&space;\end{bmatrix}" />
 
 <img src="https://latex.codecogs.com/gif.latex?J=\begin{bmatrix}&space;\Delta&space;f_1(x)\\&space;\Delta&space;f_2(x)\\&space;...\\&space;\Delta&space;f_m(x)\\&space;\end{bmatrix}&space;=&space;\begin{bmatrix}&space;\frac{d}{dx_1}f_1(x)&space;&&space;\frac{d}{dx_2}f_1(x)&space;&&space;...&space;&&space;\frac{d}{dx_n}f_1(x)\\&space;\frac{d}{dx_1}f_2(x)&space;&&space;\frac{d}{dx_2}f_2(x)&space;&&space;...&space;&&space;\frac{d}{dx_n}f_2(x)\\&space;...&space;&&space;...&space;&&space;...&space;&&space;...&space;\\&space;\frac{d}{dx_1}f_m(x)&space;&&space;\frac{d}{dx_2}f_m(x)&space;&&space;...&space;&&space;\frac{d}{dx_n}f_m(x)\\&space;\end{bmatrix}" />
+
+### Mathematical Optimisation
+The optimisation problem:
+
+Minimize *f*<sub>0<sub>(*x*) --> also known as the objective function where *x* is the optimisation variable. These are the parameters we want to update.
+
+So that:
+
+<img src="https://latex.codecogs.com/gif.latex?f_{i}(x)\leq&space;0,&space;i=\{1,...,k\}" /><br>
+<img src="https://latex.codecogs.com/gif.latex?h_{j}(x)=0,j=\{1,...,l\}" />
+
+These are the constraint functions.
+
+**Difference between local and global critical points**<br>
+Critical points: maximum or minimum. Defined by the derivative of the slope = 0. 
+
+There are global and local critical points. Global critical points are the absolute largest/lowest points in the graph. Local critical points are the largest/lowest points in their immediate area.
+
+#### Convex Optimisation
+If the objective function is convex, the optimisation problem is called convex optimisation. A convex function is such that when drawing a line between any two points of the function curve, all points in the curve are lower than any point in the line other than the origin and final points of the line.
+
+<img src="convex_function.png" />
+
+#### Finding Extrema (Critical Points) with Calculus
+Calculus can be used to find extrema for an objective function. For example:
+
+<img src="https://latex.codecogs.com/gif.latex?y=x^{2}+3" />
+
+<img src="sample_function.png" />
+
+The derivative at the critical point will be = 0.
+
+1. Find the first derivative of the *f(x)*<br>
+y=x<sup>2</sup>+3<br>
+y'=2x
+
+2. Set the derivative = 0
+0=2x
+x=0 --> this is a critical point
+
+3. Do the second derivative test
+y'=2x
+y''=2 --> if the second derivative is positive we have a minimum, if negative we have a maximum.
+
+If we can prove that the function is a convex function, there is no need to do the second derivative test as we would be guaranteed to be at the global critical point.
+
+In machine learning the optimisation process is iterative by starting with a guess and then iterating.
+
+
