@@ -300,4 +300,79 @@ If we can prove that the function is a convex function, there is no need to do t
 In machine learning the optimisation process is iterative by starting with a guess and then iterating.
 
 ## Probability Theory
+### Intro to Probability
+- Sources of uncertainty
+  - Inherent stochasticity in the system being modeled
+  - Incoplete observability
+  - Incomplete modelling
+- Types of probability
+  - Frequentist: the frequency of events.
+  - Bayesian probability: a degree of belief
+Both types of proabilities follow the same anxioms and are modelled the same.
 
+### Probability Distributions
+Random variables
+- a variable that can take different values randomly
+- a probability distribution specifies how likely each value is to occur
+- may be discrete (finite or countable number of states) or continuous
+
+#### Probability Distributio for Distcrete Variables
+**Probability Mass Function**: Probability distribution for discrete random variables 
+- Criteria for PMF:
+  - the domain of *P* must be the set of all possible states of *x*
+  - <img src="https://latex.codecogs.com/gif.latex?0\leq&space;P(x)\leq&space;1" />
+  - <img src="https://latex.codecogs.com/gif.latex?\sum&space;P(x)=1" /> --> the sumation over all possible states of *P(x)* = 1. This is known as being normalised.
+  
+**Joint Probability Distributions**: PMF that acts on multiple variables<br>
+*P(x=x,y=y)* denotes the probability that *x=x* and *y=y* simultaneously.
+
+**Uniform Distribution**: probability distribution where each state of the distribution is equally likely.This distribution is normalised.<br>
+<img src="https://latex.codecogs.com/gif.latex?P(x=x_{i})=\frac{1}{k}" /><br>
+<img src="https://latex.codecogs.com/gif.latex?\sum_{i}&space;P(x=x_{i})=\sum_{i}&space;\frac{1}{k}=\frac{k}{k}=1" />
+
+#### Probability Distribution for Continuous Variables
+**Probability Density Function**: probability distributions for continuous variables.
+
+To be a PDF, the function *p* must satisfy:
+- The domain of *p* must be the set of all positive states of *x*
+
+- <img src="https://latex.codecogs.com/gif.latex?p(x)\geq&space;0" />
+
+- <img src="https://latex.codecogs.com/gif.latex?\int&space;p(x)dx=1" />
+
+#### Marginal Probability
+Probability distribution over a subset of all the variables.
+
+**With discrete random variables**<br>
+If we know *P(x,y)*, we can find *P(x)* with the sum rule:<br>
+<img src="https://latex.codecogs.com/gif.latex?P(\texttt{x}=x)=\sum_{y}P(\texttt{x}=x,\texttt{y}=y)" />
+
+**With continuous random variables**<br>
+<img src="https://latex.codecogs.com/gif.latex?P(x)=\int&space;p(x,y)dy" />
+
+#### Conditional Probability
+The probability of some event given that some other event has happened.<br>
+<img src="https://latex.codecogs.com/gif.latex?P(\texttt{y}=y|\texttt{x}=x)=\frac{P(\texttt{y}=y,\texttt{x}=x)}{P(\texttt{x}=x)}" />
+
+### Expectation, Variance, and Covariance
+- Expectation: The expectation of some function *f(x)* with respect to some probability distribution *P(x)* is the mean value *f* takes on when *x* is drawn from *P*.
+  - For discrete variables <img src="https://latex.codecogs.com/gif.latex?\texttt{E}_{x\sim&space;P}[f(x)]=\sum_x&space;P(x)f(x)" />
+  - For continuous variables <img src="https://latex.codecogs.com/gif.latex?\texttt{E}_{x\sim&space;p}[f(x)]=\int&space;p(x)f(x)dx" />
+  
+- Variance (<img src="https://latex.codecogs.com/gif.latex?\sigma^{2}" />): the expectation of the squared deviation of a random variable from its mean. It measures how far random numbers drawn from a probability distribution *P(x)* are spread out from their average value.<br>
+<img src="https://latex.codecogs.com/gif.latex?\texttt{Var}(f(x))=\texttt{E}[(f(x)-\texttt{E}[f(x)])^{2}]" />
+
+- Standard Deviation(<img src="https://latex.codecogs.com/gif.latex?\sigma" />): <img src="https://latex.codecogs.com/gif.latex?\sqrt{\sigma^{2}}" />
+
+- Covariance: a measure of how much two variables are related to each other. 
+<img src="https://latex.codecogs.com/gif.latex?\texttt{Cov}(f(x),g(y))=\texttt{E}[(f(x)-\texttt{E}[f(x)])(g(y)-\texttt{E}[g(y)])]" />
+  - High absolute value - values are both far from their respective means at the same time.
+  - Positive: both variables take on large values simultaneously.
+  - Negative: variables take inversely large values.
+  - Covariance is affected by scale
+  - Covariance and dependence are related but distinct concepts. Two independent variables have zero covariance but it is possible for dependent variables to have zero covariance if their relationship is non-linear. Independence already excludes non-linear relationships.
+  - Commonly used in AI to compress input data or produce better output results when input variables are identified as linearly dependent.
+
+- Covariance Matrix: the covariance matrix of a random vector **x** is an *n* x *n* matrix such that:<br>
+<img src="https://latex.codecogs.com/gif.latex?\texttt{Cov}(\textbf{x})_{i,j}=\texttt{Cov}(x_{i},x_{j})" />
+  - The diagonal elements of the covariance matrix give the variance: <img src="https://latex.codecogs.com/gif.latex?\texttt{Cov}(x_{i}, x_{i})=\texttt{Var}(x_{i})" />
