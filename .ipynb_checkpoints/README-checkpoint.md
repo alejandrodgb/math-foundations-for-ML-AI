@@ -376,3 +376,39 @@ The probability of some event given that some other event has happened.<br>
 - Covariance Matrix: the covariance matrix of a random vector **x** is an *n* x *n* matrix such that:<br>
 <img src="https://latex.codecogs.com/gif.latex?\texttt{Cov}(\textbf{x})_{i,j}=\texttt{Cov}(x_{i},x_{j})" />
   - The diagonal elements of the covariance matrix give the variance: <img src="https://latex.codecogs.com/gif.latex?\texttt{Cov}(x_{i}, x_{i})=\texttt{Var}(x_{i})" />
+  
+## Probability Theory
+### Special Random Variables
+Defined as distributions that are commonly found in real-life data and machine learning applications.
+
+#### Discrete variable distributions
+##### Bernoulli
+Distribution over a single binary random variable. Parametrised by: 
+
+<img src="https://latex.codecogs.com/gif.latex?p(x=1)&space;=&space;\phi" /><br>
+<img src="https://latex.codecogs.com/gif.latex?p(x=0)&space;=&space;1-\phi" /><br>
+
+##### Multinoulli
+Distribution over single discrete variable with *k* number of states where *k* is finite. Also known as a categorical distribution.
+
+Both Bernoulli and Multinoulli distributions model discrete variables where all states are known. 
+
+#### Continuous variable distributions
+##### Gaussian (normal)
+Most commonly used over real numbers. Defined by two parameters:
+
+<img src="https://latex.codecogs.com/gif.latex?\mathit{N}(x;\mu,\sigma^2)=\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2}\left&space;(&space;\frac{x-\mu}{\sigma}\right&space;)^{2}}"  />
+
+The central limit theorem shows that the sum of many independent random variables is approximately normally distributed.
+
+##### Exponential distribution
+Sharp point at X=0 and decay exponentially everywhere else:
+
+<img src="https://latex.codecogs.com/gif.latex?p(x;\lambda)=\lambda&space;1_{x\geq&space;0}e^{\lambda&space;x}" /><br>
+
+This uses the indicator function to assing a probability of zero to all negative values of x
+
+#### Laplace distribution
+Sharp point at <img src="https://latex.codecogs.com/gif.latex?x=\mu" /><br>
+
+<img src="https://latex.codecogs.com/gif.latex?\texttt{Laplace}(x;\mu,\gamma)=\frac{1}{2\gamma}e^{-\frac{\left&space;|&space;x-\mu&space;\right&space;|}{\gamma}}" />
